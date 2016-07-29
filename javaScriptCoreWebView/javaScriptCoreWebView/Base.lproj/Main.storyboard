@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VLr-Df-DQt">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sl6-tp-1VW">
+            <objects>
+                <navigationController id="VLr-Df-DQt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hcw-Wa-Cdx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KwB-Oa-SlG" kind="relationship" relationship="rootViewController" id="TGN-94-5xe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbM-Yh-AA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-616" y="46"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wc3-0m-7XT">
+            <objects>
+                <viewController id="KwB-Oa-SlG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MGF-RP-Kq4"/>
+                        <viewControllerLayoutGuide type="bottom" id="d68-CT-aNT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oer-MV-KWH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8H-op-eBq">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.70128195069999999" blue="0.52472054810000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="f1J-RI-1r1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q8H-op-eBq" firstAttribute="centerY" secondItem="Oer-MV-KWH" secondAttribute="centerY" id="UiJ-WN-T5I"/>
+                            <constraint firstItem="q8H-op-eBq" firstAttribute="centerX" secondItem="Oer-MV-KWH" secondAttribute="centerX" id="y9a-tF-SLZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QIk-r1-p0U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nb6-1w-1aK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31" y="40"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +65,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Qy-bo-DdW">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8Gg-PI-Jck"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-0i-yDM">
+                                <rect key="frame" x="285" y="285" width="31" height="30"/>
+                                <state key="normal" title="--JS"/>
+                                <connections>
+                                    <action selector="callJsGrilDo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pd4-sn-DK5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Qy-bo-DdW" secondAttribute="trailing" id="GYH-qJ-lhT"/>
+                            <constraint firstItem="LEu-0i-yDM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UzG-qM-5Pr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Qy-bo-DdW" secondAttribute="bottom" id="aWI-oT-ora"/>
+                            <constraint firstItem="0Qy-bo-DdW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fyV-Xs-EUo"/>
+                            <constraint firstItem="0Qy-bo-DdW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="imK-HC-JqK"/>
+                            <constraint firstItem="LEu-0i-yDM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qTl-6x-1ym"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SXK-iL-aIf"/>
+                    <connections>
+                        <outlet property="webView" destination="0Qy-bo-DdW" id="qt9-cd-fsU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="689" y="51"/>
         </scene>
     </scenes>
 </document>

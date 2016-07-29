@@ -1,0 +1,74 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p></p>
+
+
+<div id="myDiv"  style="background-color: red; width: 200px; height: 22px;"></div>
+
+<button id="myBtn2">加属性用的</button>
+<button id="mybtn">点我啊笨蛋</button>
+
+<!---->
+<script type="text/javascript">
+
+    var boy;
+    var btn = document.getElementById('mybtn');
+    var div = document.getElementById('myDiv'); 
+
+    var btn2 = document.getElementById('myBtn2');
+
+	function JsGirl(){
+	this.boyFriend = "";
+	this.name = "beauty girl";
+	
+	this.changeDivColor = function(){
+		div.style.backgroundColor = "#333";
+		}
+	}		
+
+
+     var jsGirl = new JsGirl(); 
+
+
+	btn2.onclick = function(){
+	alert("进来了!");
+	  jsGirl.boyFriend = boy;
+          jsGirl.boyFriend.nickName = "pig";
+	  boy.girlFriend = jsGirl;  
+	}
+
+    btn.onclick = function(){
+        console.log("你还真点啊!");
+        alert("你还真点啊!");
+        
+        boy.seyHello();
+	//boy.seyHello('xixi');
+	//boy.seyHi([90,23,"22",{"key":"99"}]);
+//	boy.gotoVcWithTitle("detailVcType", "I miss You!");
+	jsGirl.boyFriend = boy;
+	boy.girlFriend = jsGirl;	
+
+	boy.girlFriend.changeDivColor();
+	jsGirl.boyFriend.pay();
+
+
+//	boy.gotoAVc("213123", "hi meirenji");  
+//	boy = NULL;
+//	Person.seyClassMethod();
+	//var testPerson = Person.myAllocInit();
+	
+	//var testPerson = Person.alloc().init();
+	//testPerson.gotoAVc("213123", "hi meirenji");
+	//alert(testPerson);
+//	testPerson.gotoAVc("213123", "hi meirenji"); 
+  }
+
+</script>
+
+</body>
+</html>

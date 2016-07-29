@@ -15,6 +15,8 @@
 		04DB9CA91D4B066600ADB8F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DB9CA71D4B066600ADB8F2 /* LaunchScreen.storyboard */; };
 		04DB9CB41D4B066600ADB8F2 /* javaScriptCoreWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB9CB31D4B066600ADB8F2 /* javaScriptCoreWebViewTests.m */; };
 		04DB9CBF1D4B066600ADB8F2 /* javaScriptCoreWebViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB9CBE1D4B066600ADB8F2 /* javaScriptCoreWebViewUITests.m */; };
+		04DB9CCF1D4B0D2C00ADB8F2 /* jsOCTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 04DB9CCC1D4B0D2C00ADB8F2 /* jsOCTest.html */; };
+		04DB9CD01D4B0D2C00ADB8F2 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB9CCE1D4B0D2C00ADB8F2 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		04DB9CBA1D4B066600ADB8F2 /* javaScriptCoreWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = javaScriptCoreWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DB9CBE1D4B066600ADB8F2 /* javaScriptCoreWebViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = javaScriptCoreWebViewUITests.m; sourceTree = "<group>"; };
 		04DB9CC01D4B066600ADB8F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DB9CCC1D4B0D2C00ADB8F2 /* jsOCTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsOCTest.html; sourceTree = "<group>"; };
+		04DB9CCD1D4B0D2C00ADB8F2 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		04DB9CCE1D4B0D2C00ADB8F2 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				04DB9C9D1D4B066600ADB8F2 /* AppDelegate.m */,
 				04DB9C9F1D4B066600ADB8F2 /* ViewController.h */,
 				04DB9CA01D4B066600ADB8F2 /* ViewController.m */,
+				04DB9CCC1D4B0D2C00ADB8F2 /* jsOCTest.html */,
+				04DB9CCD1D4B0D2C00ADB8F2 /* Person.h */,
+				04DB9CCE1D4B0D2C00ADB8F2 /* Person.m */,
 				04DB9CA21D4B066600ADB8F2 /* Main.storyboard */,
 				04DB9CA51D4B066600ADB8F2 /* Assets.xcassets */,
 				04DB9CA71D4B066600ADB8F2 /* LaunchScreen.storyboard */,
@@ -246,6 +254,7 @@
 				04DB9CA91D4B066600ADB8F2 /* LaunchScreen.storyboard in Resources */,
 				04DB9CA61D4B066600ADB8F2 /* Assets.xcassets in Resources */,
 				04DB9CA41D4B066600ADB8F2 /* Main.storyboard in Resources */,
+				04DB9CCF1D4B0D2C00ADB8F2 /* jsOCTest.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +281,7 @@
 			files = (
 				04DB9CA11D4B066600ADB8F2 /* ViewController.m in Sources */,
 				04DB9C9E1D4B066600ADB8F2 /* AppDelegate.m in Sources */,
+				04DB9CD01D4B0D2C00ADB8F2 /* Person.m in Sources */,
 				04DB9C9B1D4B066600ADB8F2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = javaScriptCoreWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wutong.javaScriptCoreWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = javaScriptCoreWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.wutong.javaScriptCoreWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
